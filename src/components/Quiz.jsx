@@ -32,9 +32,9 @@ const QuizApp = () => {
       {currentQuestion < Data.length ? (
         <div className='bg-yellow-50 md:w-7/12 md:h-5/6 h-5/6 w-11/12 rounded-3xl border-4 border-black relative'>
             <div className='p-10'>
-            <h1 className='md:text-6xl text-4xl'>Q{currentQuestion+1}:<span className='md:text-4xl text-3xl'>{" "+Data[currentQuestion].question}</span></h1>
+            <h1 className='md:text-6xl text-4xl font-bold'>Q{currentQuestion+1}:<span className='md:text-4xl text-3xl font-normal'>{" "+Data[currentQuestion].question}</span></h1>
           <div className='flex justify-center'>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 bottom-24 absolute">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:bottom-24 bottom-24 absolute">
             {Data[currentQuestion].options.map((option, i) => (
               <button
                 key={i}
@@ -66,9 +66,9 @@ const QuizApp = () => {
 
       {currentQuestion < Data.length && !quizCompleted && (
         <div className='absolute top-10 md:right-60 right-10'>
-          <div className='w-20 h-20 bg-pink-300 relative'>
-            <div className='w-20 h-20 bg-pink-300 absolute' style={{ transform: "rotate(30deg)"}}>
-              <div className='w-20 h-20 bg-pink-300 absolute flex justify-center items-center' style={{ transform: "rotate(30deg)"}}>
+          <div className='md:w-20 md:h-20 w-16 h-16 bg-pink-300 relative'>
+            <div className='md:w-20 md:h-20 w-16 h-16 bg-pink-300 absolute' style={{ transform: "rotate(30deg)"}}>
+              <div className='md:w-20 md:h-20 w-16 h-16 bg-pink-300 absolute flex justify-center items-center' style={{ transform: "rotate(30deg)"}}>
                 <h1 className='text-5xl' style={{ transform: "rotate(-60deg)"}}>{score}</h1>
               </div>
             </div>
